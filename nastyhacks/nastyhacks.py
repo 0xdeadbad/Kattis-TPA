@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Autor: Matheus da Silva Garcias
 Matrícula: 20171BSI0456
@@ -12,6 +13,6 @@ print = stdout.write
 
 n = int(input())
 
-for i in range(n):
+for _ in range(n):
     r, e, c = [int(x) for x in input().strip().split(' ')]
     print("does not matter\n" if r + c == e else "do not advertise\n" if r + c > e else "advertise\n")

@@ -1,0 +1,43 @@
+\documentclass{article}
+
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{minted}
+\usepackage{titling}
+\usepackage{mdframed}
+\usepackage{indentfirst}
+
+\definecolor{codebgcolor}{rgb}{0.98, 0.98, 0.98}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\title{Técnicas de Programação Avançada}
+\subtitle{Trabalho 1 -- Aclimatação com Juízes Online de Programação}
+\date{\today}
+\author{Matheus da Silva Garcias}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \maketitle
+    \newpage
+    \pagenumbering{arabic}
+
+    \section{Introdução}
+        \subsection{Introdução ao documento}
+            Este documento é rum relatório de problemas resolvidos na plataforma Kattis. Através desse documento será apresentada uma breve introdução, logo após serão apresentados os códigos e comentários sobre suas soluções.
+        \subsection{O que é a plataforma Kattis}
+            A plataforma Kattis é um website que permite que estudantes enviem soluções de problemas de computação variados, em nível de dificuldade e assunto, propostos pelo mesmo.
+        \subsection{Quem corrige os códigos enviados}
+            A verificação se dá a partir da entrada e saída de dados do programa. Cada problema define um modelo de entrada de dados e um modelo de saída. O programador deve interpretar a saída e entrada de dados de acordo com os formatos definidos pelo problema.
+            \par Após o envio do programa para o juiz virtual, a é executa uma verificação baseado no saída de dados do seu programa com os resultados reais. Caso todos as saídas do seu programam sejam iguais ao resultados dos juiz, seu programa é aprovado.
+
+    \section{Problemas}
+        \subsection{A New Alphabet}
+            \input{../src/anewalphabet/anewalphabet.tex}
+    
+\end{document}

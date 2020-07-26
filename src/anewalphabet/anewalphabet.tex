@@ -1,0 +1,20 @@
+A resolução deste problema é simples, basta trocar cada caractere da string fornecida pelos caracteres equivalentes fornecidos pela tabela do problema.
+
+\begin{mdframed}[linewidth=0pt,backgroundcolor=codebgcolor]
+    \inputminted[breaklines]{python}{../src/anewalphabet/anewalphabet.py}
+\end{mdframed}
+
+\par Basicamente todos os caracteres lidos são transformados para minúscula, casa haja algum maiúsculo.
+Uma tabela para conversão dos caracteres é pré-criada para uso posterior no código.
+\par Na parte do código a seguir, como apenas caracteres alfabéticos serão convertidos, é vericado se são caracteres a partir de seus números na tabela ASCII, já que são sequenciais. Caso seja alfabético, é subtraído 97 de seu valor ASCII, porque 97 é o valor de "a", a primeira letra do alfabeto. Assim podemos usar essa subtração para obter o indíce da lista de símbolos.
+
+\begin{mdframed}[linewidth=0pt,backgroundcolor=codebgcolor]
+    \begin{minted}[]{python}
+        for l in t:
+            if ord(l) >= 97 and ord(l) <= 122:
+                print(symbols[ord(l) - 97])
+            else:
+                print(l)
+    \end{minted}
+\end{mdframed}
+\par Caso o caractere não esteja dentro dos valores da tabela ASCII de caracteres alfabéticos minúsculos, então ele é enviado para a saída padrão sem nenhum processamento.

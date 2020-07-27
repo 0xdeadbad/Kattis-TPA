@@ -1,0 +1,20 @@
+Esse problema foi relativamente simples. Foi utilizado algumas operações bitwise, ou seja operações em níveis de bits.
+\par Como a parte de cima da espada e a parte de baixo são as mesmas, então utiliza-se uma variável para guardar ambos.
+\paragraph{Segue o código completo}
+\begin{mdframed}[linewidth=0pt,backgroundcolor=codebgcolor]
+    \inputminted[breaklines]{python}{../src/brokenswords/brokenswords.py}
+\end{mdframed}
+
+\par Nesta linha de código abaixo, na parte antes do "+", é executado uma operação de "SHIFT" de dois 2 bits, e então uma operação de "AND" com 1 para descartar o último bit, e, por último, uma operação de "XOR" para negar o bit, visto que 0 quer dizer que esse pedaço da espada não está quebrada. A parte depois do "+" é muito parecida com a anterior, porém não é feito a operação de "AND" com 1, pois é o último bit (são 4 bits), e todos os bits depois dele são 0.
+\begin{mdframed}[linewidth=0pt,backgroundcolor=codebgcolor]
+    \begin{minted}{python}
+         tb += (((s >> 2) & 1) ^ 1) + ((s >> 3) ^ 1)
+    \end{minted}
+\end{mdframed}
+
+\par A linha de código abaixo é basicamente a mesma coisa da anterior, porém ajustando alguns bits para conseguir extrair os bits corretos, os dois últimos bits.
+\begin{mdframed}[linewidth=0pt,backgroundcolor=codebgcolor]
+    \begin{minted}{python}
+         lr += (((s & 0b0010) >> 1) ^ 1) + ((s & 1) ^ 1)
+    \end{minted}
+\end{mdframed}

@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[hidelinks]{article}
 
 \usepackage[portuguese]{babel}
 \usepackage[utf8]{inputenc}
@@ -6,6 +6,7 @@
 \usepackage{titling}
 \usepackage{mdframed}
 \usepackage{indentfirst}
+\usepackage{hyperref}
 
 \definecolor{codebgcolor}{rgb}{0.98, 0.98, 0.98}
 
@@ -25,6 +26,8 @@
     \pagenumbering{gobble}
     \maketitle
     \newpage
+    \tableofcontents
+    \newpage
     \pagenumbering{arabic}
 
     \section{Introdução}
@@ -37,7 +40,40 @@
             \par Após o envio do programa para o juiz virtual, a é executa uma verificação baseado no saída de dados do seu programa com os resultados reais. Caso todos as saídas do seu programam sejam iguais ao resultados dos juiz, seu programa é aprovado.
 
     \section{Problemas}
-        \subsection{A New Alphabet}
-            \input{../src/anewalphabet/anewalphabet.tex}
+        \subsection{Os problemas escolhidos}
+            Os problemas escolhidos para resolução e aprensentação desse trabalho foram:
+            \begin{itemize}
+                \item \href{https://open.kattis.com/problems/anewalphabet}{A New Alphabet}
+                \item \href{https://open.kattis.com/problems/brokenswords}{Broken Swords}
+                \item \href{https://open.kattis.com/problems/encodedmessage}{Encoded Message}
+                \item \href{https://open.kattis.com/problems/nastyhacks}{Nasty Hacks}
+                \item \href{https://open.kattis.com/problems/oddgnome}{Odd Gnome}
+                \item \href{https://open.kattis.com/problems/speedlimit}{Speed Limit}
+                \item \href{https://open.kattis.com/problems/symmetricorder}{Symmetric Order}
+                \item \href{https://open.kattis.com/problems/vacuumba}{Vacuumba}
+                \item \href{https://open.kattis.com/problems/trik}{Trik}
+                \item \href{https://open.kattis.com/problems/apaxiaaans}{Apaxiaaaaaaaaaaaans!}        
+            \end{itemize}
+        \subsection{Soluções}
+            \subsubsection{A New Alphabet}
+                \input{../src/anewalphabet/anewalphabet.tex}
+            \subsubsection{Broken Swords}
+                \input{../src/brokenswords/brokenswords.tex}
+            \subsubsection{Encoded Message}
+                \input{../src/encodedmessage/encodedmessage.tex}
+            \subsubsection{Nasty Hacks}
+                \input{../src/nastyhacks/nastyhacks.tex}
+            \subsubsection{Odd Gnome}
+                \input{../src/oddgnome/oddgnome.tex}
+            \subsubsection{Speed Limit}
+                \input{../src/speedlimit/speedlimit.tex}
+            \subsubsection{Symmetric Order}
+                \input{../src/symmetricorder/symmetricorder.tex}
+            \subsubsection{Vacuumba}
+                \input{../src/vacuumba/vacuumba.tex}
+            \subsubsection{Trik}
+                \input{../src/trik/trik.tex}
+            \subsubsection{Apaxiaaaaaaaaaaaans!}
+                \input{../src/apaxiaaans/apaxiaaans.tex}
     
 \end{document}
